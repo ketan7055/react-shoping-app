@@ -1,5 +1,6 @@
 import React from "react";
 import { View, FlatList, Text, TouchableOpacity } from "react-native";
+import styles from "./styles";
 
 const products = [
   { id: "1", name: "Shirt", price: 500 },
@@ -8,7 +9,7 @@ const products = [
 
 export default function HomeScreen({ navigation }) {
   return (
-    <View>
+    <View style={styles.container}>
       <FlatList
         data={products}
         keyExtractor={(item) => item.id}

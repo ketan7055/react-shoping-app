@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { View, TextInput, Button } from "react-native";
+import { View, TextInput, Button, KeyboardAvoidingView } from "react-native";
 import { useDispatch } from "react-redux";
 import { signup } from "../../redux/actions/authActions";
+import styles from "./styles";
 
 export default function SignupScreen({ navigation }) {
   const dispatch = useDispatch();
@@ -14,15 +15,23 @@ export default function SignupScreen({ navigation }) {
   };
 
   return (
-    <View>
-      <TextInput placeholder="Email" onChangeText={setEmail} value={email} />
-      <TextInput
-        placeholder="Password"
-        secureTextEntry
-        onChangeText={setPassword}
-        value={password}
-      />
-      <Button title="Sign Up" onPress={handleSignup} />
-    </View>
+    <KeyboardAvoidingView behavior="padding" style={styles.container}>
+      <View style={styles.card}>
+        <TextInput
+          style={styles.input}
+          placeholder="Email"
+          onChangeText={setEmail}
+          value={email}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Password"
+          secureTextEntry
+          onChangeText={setPassword}
+          value={password}
+        />
+        <Button title="Sign Up" onPress={handleSignup} />
+      </View>
+    </KeyboardAvoidingView>
   );
 }
