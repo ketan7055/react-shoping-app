@@ -1,29 +1,30 @@
-import React from "react";
-import { View, FlatList, Text, TouchableOpacity } from "react-native";
+import React, { useCallback, useMemo } from "react";
+import { View, FlatList, Text, TouchableOpacity, Image } from "react-native";
+import data from "../../../assets/products.json"; // ✅ Local JSON
 import styles from "./styles";
 
-const products = [
-  { id: "1", name: "Shirt", price: 500 },
-  { id: "2", name: "Shoes", price: 1200 },
-];
-
 export default function HomeScreen({ navigation }) {
+  const renderItem = useCallback(({ item }) => {
+    return (
+      <TouchableOpacity
+        style={styles.card}
+        onPress={() => navigation.navigate("ProductDetails", { product: item })}
+      >
+        <Image style={styles.img} source={{ uri: item?.thumbnail }} />
+        <Text>
+          {item.title} - ₹{item.price}
+        </Text>
+      </TouchableOpacity>
+    );
+  });
+
   return (
     <View style={styles.container}>
       <FlatList
-        data={products}
+        data={data?.products}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <TouchableOpacity
-            onPress={() =>
-              navigation.navigate("ProductDetails", { product: item })
-            }
-          >
-            <Text>
-              {item.name} - ₹{item.price}
-            </Text>
-          </TouchableOpacity>
-        )}
+        renderItem={renderItem}
+        showsVerticalScrollIndicator={false}
       />
     </View>
   );

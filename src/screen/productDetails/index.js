@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import styles from "./styles";
 
 export default function ProductDetailsScreen({ route }) {
@@ -9,10 +9,16 @@ export default function ProductDetailsScreen({ route }) {
   const getDiscountedPrice = (discount) => () => product.price - discount;
 
   const calculatePrice = getDiscountedPrice(100);
-
   return (
     <View style={styles.container}>
-      <Text>Name: {product.name}</Text>
+      <Image
+        style={styles.img}
+        source={{
+          uri: product?.images[0],
+        }}
+      />
+      <Text>Name: {product.title}</Text>
+      <Text>Description: {product.description}</Text>
       <Text>Original Price: ₹{product.price}</Text>
       <Text>Discounted Price: ₹{calculatePrice()}</Text>
     </View>
