@@ -1,6 +1,12 @@
-Shopping app
-**Command**
+**Shopping app**
+<br/>
+<br/>
+**Command to create the app**
 - yarn create react-app my-app
+<br/>
+
+**Command to run the app**
+
 - yarn ios
 - yarn android
 
