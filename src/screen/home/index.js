@@ -8,6 +8,7 @@ export default function HomeScreen({ navigation }) {
     return (
       <TouchableOpacity
         style={styles.card}
+        testID={`product-${item.id}`}
         onPress={() => navigation.navigate("ProductDetails", { product: item })}
       >
         <Image style={styles.img} source={{ uri: item?.thumbnail }} />
