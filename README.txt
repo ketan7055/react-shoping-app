@@ -4,6 +4,15 @@ yarn create react-app my-app
 yarn ios
 yarn android
 
+test case run command:
+yarn test --coverage  
+open coverage/lcov-report/index.html
+
+
+
+
+
+
 
 
 ---------PACKEGES--------
@@ -18,3 +27,7 @@ yarn android
 "react-redux": "^9.2.0",
 "redux": "^5.0.1",
 "redux-thunk": "^3.1.0"
+"babel-jest": "^30.0.5",
+"jest": "^30.0.5",
+"jest-expo": "^53.0.9",
+"react-test-renderer": "19.0.0"
