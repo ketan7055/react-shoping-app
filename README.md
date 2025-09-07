@@ -48,8 +48,10 @@
 <img width=35% height=35% alt="Simulator Screenshot - iPhone 15 - 2025-06-23 at 16 55 28" src="https://github.com/user-attachments/assets/4bf255b6-3165-4878-a9ac-b187e3475289" />
 
 <br/>
-<img width=35% height=35% alt="Simulator Screenshot - iPhone 15 - 2025-06-23 at 16 55 24" src="https://github.com/user-attachments/assets/b16a0701-fa57-4b3b-b52c-020f533d7ac9" />
 
+
+
+<img  width=35% height=35% alt="Simulator Screenshot - iPhone 15 - 2025-09-07 at 14 55 05" src="https://github.com/user-attachments/assets/5864f855-2bb9-463d-9228-334cb2045397" />
 
 
 
