@@ -32,6 +32,8 @@
 - "jest-expo": "^53.0.9",
 - "react-test-renderer": "19.0.0"
 
+**Test case**
+<br/>
 <img width="1488" height="627" alt="Screenshot 2025-08-21 at 7 47 05 PM" src="https://github.com/user-attachments/assets/ccbf121e-1eed-4d0a-9617-aeb9a8396749" />
 
 <br/>
